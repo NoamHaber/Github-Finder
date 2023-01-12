@@ -96,7 +96,9 @@
         margin-bottom: 12px !important;
     }
     #home-link{
-        font-size: 12px !important;
+        position: relative !important;
+        top: 3px !important;
+        font-size: 16px !important;
     }
     #git-symbol{
         position: relative;
