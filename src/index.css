@@ -70,7 +70,7 @@
         font-size: 20px !important;
         width: calc(0.9*var(--ScreenDisplayWidth)) !important;
         position: relative !important;
-        left: 20px !important;
+        left: 8px !important;
         padding: 6px !important;
     }
    #searchbar-logo{
