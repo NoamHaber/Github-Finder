@@ -75,14 +75,14 @@
     }
    #searchbar-logo{
         position: absolute !important;
-        left: 26px !important;
-        top: 12px !important;
+        left: 24px !important;
+        top: 11px !important;
         width: 20px !important;
         height: 20px !important;
     }
     #searchbar-trash{
         position: absolute !important;
-        left: 64px !important;
+        left: 62px !important;
         top:  8px !important;
         width: 20px !important;
         height: 20px !important;
