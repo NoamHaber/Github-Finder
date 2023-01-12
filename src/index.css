@@ -76,14 +76,14 @@
    #searchbar-logo{
         position: absolute !important;
         left: 32px !important;
-        top: 5px !important;
+        top: 9px !important;
         width: 20px !important;
         height: 20px !important;
     }
     #searchbar-trash{
         position: absolute !important;
         left: 70px !important;
-        top: 5.5px !important;
+        top: 8.5px !important;
         width: 20px !important;
         height: 20px !important;
     }
