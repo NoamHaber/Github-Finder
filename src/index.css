@@ -207,6 +207,7 @@
     }
     #repo-item{
         display: flex;
+        width: var(--ScreenDisplayWidth) !important;
         flex-direction: column;
         justify-content: space-around !important;
         height: 88px !important;
