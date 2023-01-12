@@ -33,7 +33,7 @@
 @media screen and (max-width: 480px) {
     
     :root {
-        --ScreenDisplayWidth: 80vw !important;
+        --ScreenDisplayWidth: 90vw !important;
     }
     #code-icon{
         margin-top:10vh !important;
