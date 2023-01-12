@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:3000/user/netanel-haber -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <title>Github search project</title>
+  <style>@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap);</style><style>:root {
+    /*
+    --backGroundTheme: #266867;
+    --navigatorTheme: #1A4645;
+    */
+    --backGroundTheme: #121212;
+    --navigatorTheme: #3b3b3d;
+    --redTheme: #DF292D;
+}
+
+@media screen and (max-width: 992px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #profile-name{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    #profile-name-and-login{
+        top: 26px;
+    }
+    #repo-layout{
+        grid-template-columns: auto;
+    }    
+}
+
+* {
+    background-color: var(--backGroundTheme);
+}
+body {
+    margin:0px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+#main-flow{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#not-found-container-container{
+    display: flex;
+    justify-content: space-around;
+}
+#not-found-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+}
+.not-found-header{
+    margin-top: 98px;
+}
+#error-button{ 
+    border-radius: 10px;
+    margin: 16px 0px;
+    padding: 10px 10px;
+    border: none;
+    color: black;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.error-link{
+    display: flex;
+}
+.nav-back{
+    background-color: var(--navigatorTheme);
+    text-decoration: none;
+}
+.main-container{
+    height: 78.7vh;
+}
+#take-home{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top:1px;
+    text-decoration: none;
+}
+#FaHome{
+    height:22px;
+    width:22px;
+    padding: 1px 6px;
+    color: white;
+}
+nav{
+    position: sticky;
+    background-color: var(--navigatorTheme);
+    display: flex;
+    justify-content: space-between;    
+}
+
+#navigator-container{
+    display: flex;
+    justify-content: flex-end;
+    margin: 16px 12px;
+}
+
+.nav-btn{
+    padding: 6px 14px;
+    color: white;
+    font-size:20px;
+    font-weight:bold;
+    font-family: 'Poppins', sans-serif;
+    border:none;
+    text-decoration: none;
+}
+
+.nav-btn:hover{
+    background-color: white;
+    color:var(--navigatorTheme);
+    cursor: pointer;
+}
+
+
+
+#home-logo{
+    background-color: var(--navigatorTheme);
+    display: flex;
+    margin: 16px 12px;
+}
+#srch-btn{
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+#srch-btn:hover{
+    background-color: white;
+    color:var(--navigatorTheme);
+    cursor: pointer;
+}
+#home-link{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: var(--navigatorTheme);
+    text-decoration: none;
+    padding: 6px 8px;
+    color: white;
+    font-size: 20px;
+}
+#git-symbol{
+    background-color: var(--navigatorTheme);
+    padding:2px 0px;
+    color: white;
+    height: 38px;
+    width : 38px;
+}
+#about-container{
+    position: relative;
+    top: 30px;
+    left: 32px;
+    width: 800px;
+}
+.about-headline{
+    font-weight: bold;
+    font-size: 56px;
+}
+#home-container{
+    text-align: center;
+}
+#user-container{
+    overflow-y: scroll;
+    color: white;
+}
+.profile-image{
+    border: 2px solid white;
+    height: 190px;
+    width: 190px;
+    border-radius: 100%;
+    position: relative;
+    right: 12px;
+}
+#profile-header{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+#profile-name-and-login{
+    height: 170px;
+    position: relative;
+    top: 8px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+}
+#profile-name{
+    font-size: 52px;
+    font-weight: bold;
+}
+#profile-login{
+    font-size: 32px;
+}
+#profile-location{
+    display: flex;
+    flex-direction: column;
+}
+#visit-github{
+    padding: 8px;
+    width: 196px;
+    background-color: var(--navigatorTheme);
+    border-radius: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+#visit-github:hover{
+    cursor: pointer;
+}
+#visit-github-icon{
+    background-color: var(--navigatorTheme);
+    position: relative;
+    top:2.5px;
+    left:3px;
+}
+#profile-attributes{
+    margin: 12px 4px;
+    display: flex;
+    justify-content: center;
+}
+#attribute-layout{
+    width: 580px;
+    display: flex;
+    justify-content: left;
+}
+.attribute-item{
+    margin: 6px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.attribute-definition{
+    width: 152px;
+    padding: 6px 14px;
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--navigatorTheme);
+}
+.attribute-icon{
+    background-color: var(--navigatorTheme);
+    position: relative;
+    top: 4px;
+    right: 4px;
+}
+#twitter-icon{
+    color: #1DA1F2;
+}
+#book-icon{
+    color: brown;
+}
+.attribute-value{
+    overflow-x: hidden;
+    height: 30px;
+    width: 152px;
+    padding: 6px 11px;
+    text-align: center;
+    border: 3px solid var(--navigatorTheme);
+    color: white;
+}
+#profile-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#bio-container{
+    display: flex;
+    justify-content: center;
+}
+#bio-layout{
+    width: 580px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#bio-header{
+    padding:2px 8px;
+    background-color: var(--navigatorTheme);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+#bio-body{
+    padding:0px 3px;
+    border: 4px solid var(--navigatorTheme);
+}
+#follow-container{
+    display: flex;
+    justify-content: center;
+    
+}
+#follow-layout{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    width: 590px;
+}
+.showcase-stats{
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    height: 80px;
+    padding: 8px;
+    margin: 8px;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+.showcase{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.showcase-title{
+    color: var(--navigatorTheme);
+    font-weight: bolder;
+}
+.showcase-body{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.showcase-icon{
+    position: relative;
+    top: 18px;
+    left: 11px;
+    color: purple;
+    height: 42px;
+    width: 42px;
+}
+#code-pen-icon{
+    top: 22px !important;
+    left: 6px !important;
+}
+#repo-title{
+    text-align: center;
+}
+#repo-container{
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: center;
+}
+#repo-layout{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+#repo-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+    border: 3px solid var(--navigatorTheme);
+    border-radius: 15px;
+    padding: 6px 6px 2px 6px;
+    margin: 8px 8px;
+}
+#repo-item:hover{
+    cursor: pointer;
+    background-color: var(--navigatorTheme);
+}
+.repo-header{
+    font-size: 24px;
+    font-weight: bold;
+}
+.repo-description{
+    height: 26px;
+    overflow-y: scroll;
+}
+.repo-link-icon{
+    position: relative;
+    top: 4px;
+    margin-right: 6px;
+}
+.repo-response{
+    display: flex;
+    justify-content: start;
+}
+.repo-response-item{
+    margin: 0px 4px;
+    padding: 4px;
+}
+.repo-response-icon{
+    background-color: transparent;
+    position: relative;
+    top: 2px;
+}
+#repo-response-viewed{
+    background-color: rgba(0,0,255,0.15);
+    color: blue;
+    border-radius: 15px;
+}
+#repo-response-starred{
+    background-color: rgba(255,255,0,0.15);
+    color: yellow;
+    border-radius: 15px;
+}
+#repo-response-issues{
+    background-color: rgba(255,0,0,0.15);
+    color: red;
+    border-radius: 15px;
+}
+#repo-response-forks{
+    background-color: rgba(0,255,0,0.15);
+    color: green;
+    border-radius: 15px;
+}
+
+#code-icon{
+    padding-top: 26px;
+    height: 60px;
+    width: 60px;
+}
+#home-text{
+    font-size: 62px;
+    padding-top: 6px;
+}
+#search-container{
+    overflow-y: scroll;
+}
+#search-bar{
+    margin-top: 36px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+}
+#search-input{
+    width: 64vw;
+    font-family: 'Poppins';
+    padding: 0px 8px;
+    font-size: 26px;
+    line-height: 1.6;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+}
+#searchbar-button{
+    background:none;
+    position: relative;
+    border: none;
+    right: 42px;
+    top: 1px;
+}
+#searchbar-clear{
+    background:none;
+    position: relative;
+    border: none;
+    right: 116px;   
+}
+#searchbar-clear:hover{
+    cursor: pointer;
+}
+#searchbar-button:hover{
+    cursor: pointer;
+}
+#searchbar-logo{
+    width: 28px;
+    height: 28px;
+    color: var(--navigatorTheme);
+    background-color: white;
+}
+#searchbar-trash{
+    width: 28px;
+    height: 28px;
+    color: var(--navigatorTheme);
+    background-color: white;
+}
+#search-results{
+    padding-top: 20px;
+}
+#loading-container{
+    display: flex;
+    justify-content: center;
+}
+.loading-svg{
+    height:48px;
+    width: 48px;
+}
+.body-text{
+    color: white;
+}
+.no-found{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.grider{
+    padding: 12px;
+    margin: 12px;
+    background-color: yellow;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+@media screen and (max-width: 992px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #profile-name{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    #profile-name-and-login{
+        top: 26px;
+    }
+    #repo-layout{
+        grid-template-columns: auto;
+    }    
+    #repo-item{
+        min-width: 84vw;
+    }
+}
+.clear-container{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8px;
+}
+.clear-text{
+    background-color: var(--navigatorTheme);
+    font-size: 14px;
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+}
+.user-container{
+    background-color: var(--navigatorTheme);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: 12px;
+    padding: 12px;
+}
+.user-image{
+    border: 2px solid black;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+.user-text{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.user-link{
+    font-size: 12px;
+    color: rgba(211,211,211,0.5);
+}
+footer{
+    width: 98.75vw;
+    z-index:0;
+    position: sticky;
+    bottom:0px;
+    color: white;
+    padding: 8px;
+    background-color: var(--navigatorTheme);
+    justify-content: center;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0lBQ0k7OztLQUdDO0lBQ0QsMEJBQTBCO0lBQzFCLHlCQUF5QjtJQUN6QixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSTtRQUNJLGFBQWE7UUFDYixnQ0FBZ0M7SUFDcEM7SUFDQTtRQUNJLGVBQWU7UUFDZixpQkFBaUI7SUFDckI7SUFDQTtRQUNJLFNBQVM7SUFDYjtJQUNBO1FBQ0ksMkJBQTJCO0lBQy9CO0FBQ0o7O0FBRUE7SUFDSSx3Q0FBd0M7QUFDNUM7QUFDQTtJQUNJLFVBQVU7SUFDVixrQ0FBa0M7SUFDbEMsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxxQkFBcUI7QUFDekI7QUFDQTtJQUNJLGVBQWU7QUFDbkI7QUFDQTtJQUNJLGFBQWE7SUFDYixhQUFhO0lBQ2Isc0JBQXNCO0FBQzFCO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsNkJBQTZCO0FBQ2pDO0FBQ0E7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLHFCQUFxQjtJQUNyQixZQUFZO0FBQ2hCO0FBQ0E7SUFDSSxnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixZQUFZO0lBQ1osWUFBWTtJQUNaLGFBQWE7SUFDYiw2QkFBNkI7QUFDakM7QUFDQTtJQUNJLGFBQWE7QUFDakI7QUFDQTtJQUNJLHVDQUF1QztJQUN2QyxxQkFBcUI7QUFDekI7QUFDQTtJQUNJLGNBQWM7QUFDbEI7QUFDQTtJQUNJLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLGVBQWU7SUFDZixxQkFBcUI7QUFDekI7QUFDQTtJQUNJLFdBQVc7SUFDWCxVQUFVO0lBQ1YsZ0JBQWdCO0lBQ2hCLFlBQVk7QUFDaEI7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQix1Q0FBdUM7SUFDdkMsYUFBYTtJQUNiLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLGFBQWE7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ZUFBZTtRQUNmLGlCQUFpQjtJQUNyQjtJQUNBO1FBQ0ksU0FBUztJQUNiO0lBQ0E7UUFDSSwyQkFBMkI7SUFDL0I7SUFDQTtRQUNJLGVBQWU7SUFDbkI7QUFDSjtBQUNBO0lBQ0ksYUFBYTtJQUNiLDZCQUE2QjtJQUM3QixtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLHVDQUF1QztJQUN2QyxlQUFlO0lBQ2YsWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLHVDQUF1QztJQUN2QyxtQkFBbUI7SUFDbkIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixZQUFZO0lBQ1osYUFBYTtBQUNqQjtBQUNBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixXQUFXO0lBQ1gsbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixhQUFhO0lBQ2Isc0JBQXNCO0FBQzFCO0FBQ0E7SUFDSSxlQUFlO0lBQ2YsNEJBQTRCO0FBQ2hDO0FBQ0E7SUFDSSxjQUFjO0lBQ2QsU0FBUztJQUNULGdCQUFnQjtJQUNoQixVQUFVO0lBQ1YsWUFBWTtJQUNaLFlBQVk7SUFDWix1Q0FBdUM7SUFDdkMsdUJBQXVCO0FBQzNCIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9UG9wcGluczp3Z2h0QDQwMDs2MDA7NzAwJmRpc3BsYXk9c3dhcCcpO1xyXG5cclxuOnJvb3Qge1xyXG4gICAgLypcclxuICAgIC0tYmFja0dyb3VuZFRoZW1lOiAjMjY2ODY3O1xyXG4gICAgLS1uYXZpZ2F0b3JUaGVtZTogIzFBNDY0NTtcclxuICAgICovXHJcbiAgICAtLWJhY2tHcm91bmRUaGVtZTogIzEyMTIxMjtcclxuICAgIC0tbmF2aWdhdG9yVGhlbWU6ICMzYjNiM2Q7XHJcbiAgICAtLXJlZFRoZW1lOiAjREYyOTJEO1xyXG59XHJcblxyXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5OTJweCkge1xyXG4gICAgLmdyaWQtY29udGFpbmVye1xyXG4gICAgICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBhdXRvIGF1dG87XHJcbiAgICB9XHJcbiAgICAjcHJvZmlsZS1uYW1le1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMzZweDtcclxuICAgICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIH1cclxuICAgICNwcm9maWxlLW5hbWUtYW5kLWxvZ2lue1xyXG4gICAgICAgIHRvcDogMjZweDtcclxuICAgIH1cclxuICAgICNyZXBvLWxheW91dHtcclxuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG87XHJcbiAgICB9ICAgIFxyXG59XHJcblxyXG4qIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJhY2tHcm91bmRUaGVtZSk7XHJcbn1cclxuYm9keSB7XHJcbiAgICBtYXJnaW46MHB4O1xyXG4gICAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJywgc2Fucy1zZXJpZjtcclxuICAgIGxpbmUtaGVpZ2h0OiAxLjY7XHJcbn1cclxuYSB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuYTpob3ZlcntcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG4jbWFpbi1mbG93e1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcbiNub3QtZm91bmQtY29udGFpbmVyLWNvbnRhaW5lcntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcclxufVxyXG4jbm90LWZvdW5kLWNvbnRhaW5lcntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcbi5ub3QtZm91bmQtaGVhZGVye1xyXG4gICAgbWFyZ2luLXRvcDogOThweDtcclxufVxyXG4jZXJyb3ItYnV0dG9ueyBcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBtYXJnaW46IDE2cHggMHB4O1xyXG4gICAgcGFkZGluZzogMTBweCAxMHB4O1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgd2lkdGg6IDIwMHB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xyXG59XHJcbi5lcnJvci1saW5re1xyXG4gICAgZGlzcGxheTogZmxleDtcclxufVxyXG4ubmF2LWJhY2t7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuLm1haW4tY29udGFpbmVye1xyXG4gICAgaGVpZ2h0OiA3OC43dmg7XHJcbn1cclxuI3Rha2UtaG9tZXtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgcGFkZGluZy10b3A6MXB4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcbiNGYUhvbWV7XHJcbiAgICBoZWlnaHQ6MjJweDtcclxuICAgIHdpZHRoOjIycHg7XHJcbiAgICBwYWRkaW5nOiAxcHggNnB4O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcbm5hdntcclxuICAgIHBvc2l0aW9uOiBzdGlja3k7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOyAgICBcclxufVxyXG5cclxuI25hdmlnYXRvci1jb250YWluZXJ7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcclxuICAgIG1hcmdpbjogMTZweCAxMnB4O1xyXG59XHJcblxyXG4ubmF2LWJ0bntcclxuICAgIHBhZGRpbmc6IDZweCAxNHB4O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgZm9udC1zaXplOjIwcHg7XHJcbiAgICBmb250LXdlaWdodDpib2xkO1xyXG4gICAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJywgc2Fucy1zZXJpZjtcclxuICAgIGJvcmRlcjpub25lO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcblxyXG4ubmF2LWJ0bjpob3ZlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gICAgY29sb3I6dmFyKC0tbmF2aWdhdG9yVGhlbWUpO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG5cclxuXHJcbiNob21lLWxvZ297XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgbWFyZ2luOiAxNnB4IDEycHg7XHJcbn1cclxuI3NyY2gtYnRue1xyXG4gICAgbWFyZ2luLXRvcDogNnB4O1xyXG4gICAgd2lkdGg6IDIwcHg7XHJcbiAgICBoZWlnaHQ6IDIwcHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuI3NyY2gtYnRuOmhvdmVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBjb2xvcjp2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuI2hvbWUtbGlua3tcclxuICAgIGZvbnQtZmFtaWx5OiAnUG9wcGlucycsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIHBhZGRpbmc6IDZweCA4cHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuI2dpdC1zeW1ib2x7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICBwYWRkaW5nOjJweCAwcHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBoZWlnaHQ6IDM4cHg7XHJcbiAgICB3aWR0aCA6IDM4cHg7XHJcbn1cclxuI2Fib3V0LWNvbnRhaW5lcntcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRvcDogMzBweDtcclxuICAgIGxlZnQ6IDMycHg7XHJcbiAgICB3aWR0aDogODAwcHg7XHJcbn1cclxuLmFib3V0LWhlYWRsaW5le1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LXNpemU6IDU2cHg7XHJcbn1cclxuI2hvbWUtY29udGFpbmVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiN1c2VyLWNvbnRhaW5lcntcclxuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG4ucHJvZmlsZS1pbWFnZXtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIHdoaXRlO1xyXG4gICAgaGVpZ2h0OiAxOTBweDtcclxuICAgIHdpZHRoOiAxOTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICByaWdodDogMTJweDtcclxufVxyXG4jcHJvZmlsZS1oZWFkZXJ7XHJcbiAgICBtYXJnaW4tdG9wOiAxMnB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbiNwcm9maWxlLW5hbWUtYW5kLWxvZ2lue1xyXG4gICAgaGVpZ2h0OiAxNzBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRvcDogOHB4O1xyXG4gICAgbGVmdDogMTJweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcbiNwcm9maWxlLW5hbWV7XHJcbiAgICBmb250LXNpemU6IDUycHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG4jcHJvZmlsZS1sb2dpbntcclxuICAgIGZvbnQtc2l6ZTogMzJweDtcclxufVxyXG4jcHJvZmlsZS1sb2NhdGlvbntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcbiN2aXNpdC1naXRodWJ7XHJcbiAgICBwYWRkaW5nOiA4cHg7XHJcbiAgICB3aWR0aDogMTk2cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxNXB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxufVxyXG4jdmlzaXQtZ2l0aHViOmhvdmVye1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcbiN2aXNpdC1naXRodWItaWNvbntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRvcDoyLjVweDtcclxuICAgIGxlZnQ6M3B4O1xyXG59XHJcbiNwcm9maWxlLWF0dHJpYnV0ZXN7XHJcbiAgICBtYXJnaW46IDEycHggNHB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbiNhdHRyaWJ1dGUtbGF5b3V0e1xyXG4gICAgd2lkdGg6IDU4MHB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogbGVmdDtcclxufVxyXG4uYXR0cmlidXRlLWl0ZW17XHJcbiAgICBtYXJnaW46IDZweCA1cHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5hdHRyaWJ1dGUtZGVmaW5pdGlvbntcclxuICAgIHdpZHRoOiAxNTJweDtcclxuICAgIHBhZGRpbmc6IDZweCAxNHB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG4gICAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogMTVweDtcclxuICAgIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAxNXB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbmF2aWdhdG9yVGhlbWUpO1xyXG59XHJcbi5hdHRyaWJ1dGUtaWNvbntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRvcDogNHB4O1xyXG4gICAgcmlnaHQ6IDRweDtcclxufVxyXG4jdHdpdHRlci1pY29ue1xyXG4gICAgY29sb3I6ICMxREExRjI7XHJcbn1cclxuI2Jvb2staWNvbntcclxuICAgIGNvbG9yOiBicm93bjtcclxufVxyXG4uYXR0cmlidXRlLXZhbHVle1xyXG4gICAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG4gICAgaGVpZ2h0OiAzMHB4O1xyXG4gICAgd2lkdGg6IDE1MnB4O1xyXG4gICAgcGFkZGluZzogNnB4IDExcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBib3JkZXI6IDNweCBzb2xpZCB2YXIoLS1uYXZpZ2F0b3JUaGVtZSk7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuI3Byb2ZpbGUtYm9keXtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuI2Jpby1jb250YWluZXJ7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuI2Jpby1sYXlvdXR7XHJcbiAgICB3aWR0aDogNTgwcHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcbiNiaW8taGVhZGVye1xyXG4gICAgcGFkZGluZzoycHggOHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbmF2aWdhdG9yVGhlbWUpO1xyXG4gICAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDE1cHg7XHJcbiAgICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiAxNXB4O1xyXG59XHJcbiNiaW8tYm9keXtcclxuICAgIHBhZGRpbmc6MHB4IDNweDtcclxuICAgIGJvcmRlcjogNHB4IHNvbGlkIHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxufVxyXG4jZm9sbG93LWNvbnRhaW5lcntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcbiNmb2xsb3ctbGF5b3V0e1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIG1hcmdpbi10b3A6IDEycHg7XHJcbiAgICB3aWR0aDogNTkwcHg7XHJcbn1cclxuLnNob3djYXNlLXN0YXRze1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgd2lkdGg6IDIyMHB4O1xyXG4gICAgaGVpZ2h0OiA4MHB4O1xyXG4gICAgcGFkZGluZzogOHB4O1xyXG4gICAgbWFyZ2luOiA4cHg7XHJcbiAgICBib3JkZXI6IDNweCBzb2xpZCB3aGl0ZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbn1cclxuLnNob3djYXNle1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLnNob3djYXNlLXRpdGxle1xyXG4gICAgY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkZXI7XHJcbn1cclxuLnNob3djYXNlLWJvZHl7XHJcbiAgICBmb250LXNpemU6IHh4LWxhcmdlO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuLnNob3djYXNlLWljb257XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0b3A6IDE4cHg7XHJcbiAgICBsZWZ0OiAxMXB4O1xyXG4gICAgY29sb3I6IHB1cnBsZTtcclxuICAgIGhlaWdodDogNDJweDtcclxuICAgIHdpZHRoOiA0MnB4O1xyXG59XHJcbiNjb2RlLXBlbi1pY29ue1xyXG4gICAgdG9wOiAyMnB4ICFpbXBvcnRhbnQ7XHJcbiAgICBsZWZ0OiA2cHggIWltcG9ydGFudDtcclxufVxyXG4jcmVwby10aXRsZXtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4jcmVwby1jb250YWluZXJ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA2NXB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbiNyZXBvLWxheW91dHtcclxuICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG8gYXV0byBhdXRvO1xyXG59XHJcbiNyZXBvLWl0ZW17XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIGJvcmRlcjogM3B4IHNvbGlkIHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbiAgICBwYWRkaW5nOiA2cHggNnB4IDJweCA2cHg7XHJcbiAgICBtYXJnaW46IDhweCA4cHg7XHJcbn1cclxuI3JlcG8taXRlbTpob3ZlcntcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxufVxyXG4ucmVwby1oZWFkZXJ7XHJcbiAgICBmb250LXNpemU6IDI0cHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG4ucmVwby1kZXNjcmlwdGlvbntcclxuICAgIGhlaWdodDogMjZweDtcclxuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcclxufVxyXG4ucmVwby1saW5rLWljb257XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0b3A6IDRweDtcclxuICAgIG1hcmdpbi1yaWdodDogNnB4O1xyXG59XHJcbi5yZXBvLXJlc3BvbnNle1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3RhcnQ7XHJcbn1cclxuLnJlcG8tcmVzcG9uc2UtaXRlbXtcclxuICAgIG1hcmdpbjogMHB4IDRweDtcclxuICAgIHBhZGRpbmc6IDRweDtcclxufVxyXG4ucmVwby1yZXNwb25zZS1pY29ue1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0b3A6IDJweDtcclxufVxyXG4jcmVwby1yZXNwb25zZS12aWV3ZWR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsMCwyNTUsMC4xNSk7XHJcbiAgICBjb2xvcjogYmx1ZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbn1cclxuI3JlcG8tcmVzcG9uc2Utc3RhcnJlZHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LDI1NSwwLDAuMTUpO1xyXG4gICAgY29sb3I6IHllbGxvdztcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbn1cclxuI3JlcG8tcmVzcG9uc2UtaXNzdWVze1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsMCwwLDAuMTUpO1xyXG4gICAgY29sb3I6IHJlZDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbn1cclxuI3JlcG8tcmVzcG9uc2UtZm9ya3N7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsMjU1LDAsMC4xNSk7XHJcbiAgICBjb2xvcjogZ3JlZW47XHJcbiAgICBib3JkZXItcmFkaXVzOiAxNXB4O1xyXG59XHJcblxyXG4jY29kZS1pY29ue1xyXG4gICAgcGFkZGluZy10b3A6IDI2cHg7XHJcbiAgICBoZWlnaHQ6IDYwcHg7XHJcbiAgICB3aWR0aDogNjBweDtcclxufVxyXG4jaG9tZS10ZXh0e1xyXG4gICAgZm9udC1zaXplOiA2MnB4O1xyXG4gICAgcGFkZGluZy10b3A6IDZweDtcclxufVxyXG4jc2VhcmNoLWNvbnRhaW5lcntcclxuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcclxufVxyXG4jc2VhcmNoLWJhcntcclxuICAgIG1hcmdpbi10b3A6IDM2cHg7XHJcbiAgICBoZWlnaHQ6IDUycHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuI3NlYXJjaC1pbnB1dHtcclxuICAgIHdpZHRoOiA2NHZ3O1xyXG4gICAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICAgIHBhZGRpbmc6IDBweCA4cHg7XHJcbiAgICBmb250LXNpemU6IDI2cHg7XHJcbiAgICBsaW5lLWhlaWdodDogMS42O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTVweDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG59XHJcbiNzZWFyY2hiYXItYnV0dG9ue1xyXG4gICAgYmFja2dyb3VuZDpub25lO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgcmlnaHQ6IDQycHg7XHJcbiAgICB0b3A6IDFweDtcclxufVxyXG4jc2VhcmNoYmFyLWNsZWFye1xyXG4gICAgYmFja2dyb3VuZDpub25lO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgcmlnaHQ6IDExNnB4OyAgIFxyXG59XHJcbiNzZWFyY2hiYXItY2xlYXI6aG92ZXJ7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuI3NlYXJjaGJhci1idXR0b246aG92ZXJ7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuI3NlYXJjaGJhci1sb2dve1xyXG4gICAgd2lkdGg6IDI4cHg7XHJcbiAgICBoZWlnaHQ6IDI4cHg7XHJcbiAgICBjb2xvcjogdmFyKC0tbmF2aWdhdG9yVGhlbWUpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbn1cclxuI3NlYXJjaGJhci10cmFzaHtcclxuICAgIHdpZHRoOiAyOHB4O1xyXG4gICAgaGVpZ2h0OiAyOHB4O1xyXG4gICAgY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG59XHJcbiNzZWFyY2gtcmVzdWx0c3tcclxuICAgIHBhZGRpbmctdG9wOiAyMHB4O1xyXG59XHJcbiNsb2FkaW5nLWNvbnRhaW5lcntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4ubG9hZGluZy1zdmd7XHJcbiAgICBoZWlnaHQ6NDhweDtcclxuICAgIHdpZHRoOiA0OHB4O1xyXG59XHJcbi5ib2R5LXRleHR7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLm5vLWZvdW5ke1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmdyaWRlcntcclxuICAgIHBhZGRpbmc6IDEycHg7XHJcbiAgICBtYXJnaW46IDEycHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XHJcbn1cclxuLmdyaWQtY29udGFpbmVye1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvIGF1dG87XHJcbn1cclxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogOTkycHgpIHtcclxuICAgIC5ncmlkLWNvbnRhaW5lcntcclxuICAgICAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvO1xyXG4gICAgfVxyXG4gICAgI3Byb2ZpbGUtbmFtZXtcclxuICAgICAgICBmb250LXNpemU6IDM2cHg7XHJcbiAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICB9XHJcbiAgICAjcHJvZmlsZS1uYW1lLWFuZC1sb2dpbntcclxuICAgICAgICB0b3A6IDI2cHg7XHJcbiAgICB9XHJcbiAgICAjcmVwby1sYXlvdXR7XHJcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBhdXRvO1xyXG4gICAgfSAgICBcclxuICAgICNyZXBvLWl0ZW17XHJcbiAgICAgICAgbWluLXdpZHRoOiA4NHZ3O1xyXG4gICAgfVxyXG59XHJcbi5jbGVhci1jb250YWluZXJ7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogOHB4O1xyXG59XHJcbi5jbGVhci10ZXh0e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbmF2aWdhdG9yVGhlbWUpO1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgcGFkZGluZzogMTJweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbn1cclxuLnVzZXItY29udGFpbmVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbmF2aWdhdG9yVGhlbWUpO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMjBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgbWFyZ2luOiAxMnB4O1xyXG4gICAgcGFkZGluZzogMTJweDtcclxufVxyXG4udXNlci1pbWFnZXtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIGJsYWNrO1xyXG4gICAgaGVpZ2h0OiA2MHB4O1xyXG4gICAgd2lkdGg6IDYwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xyXG59XHJcbi51c2VyLXRleHR7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuLnVzZXItbGlua3tcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIGNvbG9yOiByZ2JhKDIxMSwyMTEsMjExLDAuNSk7XHJcbn1cclxuZm9vdGVye1xyXG4gICAgd2lkdGg6IDk4Ljc1dnc7XHJcbiAgICB6LWluZGV4OjA7XHJcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gICAgYm90dG9tOjBweDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDhweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW5hdmlnYXRvclRoZW1lKTtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div id="main-flow"><nav><div id="home-logo"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" id="git-symbol" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span id="home-link">Github finder</span></div><div id="navigator-container"><a class="nav-btn nav-back" href="http://localhost:3000/">Home</a><a class="nav-btn nav-back" href="http://localhost:3000/about">About</a><a id="nav-back" class="nav-btn nav-back" href="http://localhost:3000/search"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" id="srch-btn" class="nav-back" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></a></div></nav><div><div id="user-container" class="main-container"><div id="profile-header"><img class="profile-image" src="https://avatars.githubusercontent.com/u/58652339?v=4"><div id="profile-name-and-login"><div id="profile-name">Netanel Haber</div><div id="profile-login">netanel-haber</div><div><a href="https://github.com/netanel-haber" target="_blank" style="color: white;"><div id="visit-github">Visit this github profile<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" id="visit-github-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></div></a></div></div></div><div id="profile-attributes"><div id="attribute-layout"><div id="profile-location" class="attribute-item" style="display: none;"><div class="attribute-definition"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="attribute-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>Location</div><div class="attribute-value"></div></div><div id="profile-twitter" class="attribute-item" style="display: none;"><div id="profile-twitter-acount" class="attribute-definition"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" id="twitter-icon" class="attribute-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>Twitter</div><div class="attribute-value"></div></div><div id="profile-website" class="attribute-item" style="display: none;"><div id="profile-website" class="attribute-definition"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" id="book-icon" class="attribute-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg>Website</div><div class="attribute-value"></div></div></div></div><div id="profile-body"><div id="bio-container"><div id="bio-layout" style="display: none;"><div id="bio-header">About me</div><div id="bio-body"></div></div></div><div id="follow-container"><div id="follow-layout"><div class="showcase-stats"><div class="showcase"><span class="showcase-title">Following</span><div class="showcase-body">1</div></div><div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="showcase-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path></svg></div></div><div class="showcase-stats"><div class="showcase"><span class="showcase-title">Followers</span><div class="showcase-body">7</div></div><div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="showcase-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></div></div><div class="showcase-stats"><div class="showcase"><span class="showcase-title">Public repos</span><div class="showcase-body">22</div></div><div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" id="code-pen-icon" class="showcase-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"></path></svg></div></div></div></div><h3 id="repo-title">Latest repositories</h3><div id="repo-container"><div id="repo-layout"><a href="https://github.com/kairess/whisper" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>whisper</div><div class="repo-description" style="display: block;">Robust Speech Recognition via Large-Scale Weak Supervision</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 0</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 0</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 1</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 0</div></div></div></a><a href="https://github.com/kairess/fast-neural-style" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>fast-neural-style</div><div class="repo-description" style="display: block;">Fast style transfer</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 1</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 1</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 0</div></div></div></a><a href="https://github.com/kairess/MaskRCNN-Colab" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>MaskRCNN-Colab</div><div class="repo-description" style="display: none;"></div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 0</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 0</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 0</div></div></div></a><a href="https://github.com/kairess/Mask_RCNN" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>Mask_RCNN</div><div class="repo-description" style="display: block;">사물 인식 및 크기 자동 측정, 세그멘테이션, 마스크 추출 Mask R-CNN Colab</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 0</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 0</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 1</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 1</div></div></div></a><a href="https://github.com/kairess/ACGPN" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>ACGPN</div><div class="repo-description" style="display: block;">"Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content"，CVPR 2020. (Modified from original with fixes for inference)</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 1</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 1</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 0</div></div></div></a><a href="https://github.com/kairess/DeepFashion_Try_On" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>DeepFashion_Try_On</div><div class="repo-description" style="display: block;">Official code for "Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content"，CVPR‘20 https://arxiv.org/abs/2003.05863</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 2</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 2</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 0</div></div></div></a><a href="https://github.com/kairess/perfect-keyboard-genetic-algorithm" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>perfect-keyboard-genetic-algorithm</div><div class="repo-description" style="display: block;">유전 알고리즘을 사용하여 손가락을 가장 조금 움직일 수 있는 완벽한 배치의 키보드를 만드는 프로젝트</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 3</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 3</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 1</div></div></div></a><a href="https://github.com/kairess/car-damage-segmentation" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>car-damage-segmentation</div><div class="repo-description" style="display: block;">차량 파손 영역 Segmentation 모델 (UNet 기반)</div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 2</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 2</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 4</div></div></div></a><a href="https://github.com/kairess/auto-ml-auto-viz" target="_blank" style="color: white;"><div id="repo-item"><div class="repo-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="repo-link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg>auto-ml-auto-viz</div><div class="repo-description" style="display: none;"></div><div class="repo-response"><div id="repo-response-viewed" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg> 5</div><div id="repo-response-starred" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> 5</div><div id="repo-response-issues" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg> 0</div><div id="repo-response-forks" class="repo-response-item"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 416 512" class="repo-response-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.9 15.2c.8 4.7 16.1 94.5 16.1 128.8 0 52.3-27.8 89.6-68.9 104.6L168 486.7c.7 13.7-10.2 25.3-24 25.3H80c-13.7 0-24.7-11.5-24-25.3l12.9-238.1C27.7 233.6 0 196.2 0 144 0 109.6 15.3 19.9 16.1 15.2 19.3-5.1 61.4-5.4 64 16.3v141.2c1.3 3.4 15.1 3.2 16 0 1.4-25.3 7.9-139.2 8-141.8 3.3-20.8 44.7-20.8 47.9 0 .2 2.7 6.6 116.5 8 141.8.9 3.2 14.8 3.4 16 0V16.3c2.6-21.6 44.8-21.4 48-1.1zm119.2 285.7l-15 185.1c-1.2 14 9.9 26 23.9 26h56c13.3 0 24-10.7 24-24V24c0-13.2-10.7-24-24-24-82.5 0-221.4 178.5-64.9 300.9z"></path></svg> 4</div></div></div></a></div></div></div></div></div><footer>Copyright © 2023 by FakeMock corp.</footer></div></div>
+  <script src="./Github search project_files/bundle.js.download"></script><script src="./Github search project_files/vendors_main.chunk.js.download"></script><script src="./Github search project_files/main.chunk.js.download"></script>
+
+</body></html>

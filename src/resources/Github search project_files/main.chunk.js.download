@@ -1,0 +1,3029 @@
+(this["webpackJsonpgit-hub-project"] = this["webpackJsonpgit-hub-project"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
+  \**************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\r\n    /*\r\n    --backGroundTheme: #266867;\r\n    --navigatorTheme: #1A4645;\r\n    */\r\n    --backGroundTheme: #121212;\r\n    --navigatorTheme: #3b3b3d;\r\n    --redTheme: #DF292D;\r\n}\r\n\r\n@media screen and (max-width: 992px) {\r\n    .grid-container{\r\n        display: grid;\r\n        grid-template-columns: auto auto;\r\n    }\r\n    #profile-name{\r\n        font-size: 36px;\r\n        font-weight: bold;\r\n    }\r\n    #profile-name-and-login{\r\n        top: 26px;\r\n    }\r\n    #repo-layout{\r\n        grid-template-columns: auto;\r\n    }    \r\n}\r\n\r\n* {\r\n    background-color: var(--backGroundTheme);\r\n}\r\nbody {\r\n    margin:0px;\r\n    font-family: 'Poppins', sans-serif;\r\n    line-height: 1.6;\r\n}\r\na {\r\n    text-decoration: none;\r\n}\r\na:hover{\r\n    cursor: pointer;\r\n}\r\n#main-flow{\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n#not-found-container-container{\r\n    display: flex;\r\n    justify-content: space-around;\r\n}\r\n#not-found-container{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-content: center;\r\n    color: white;\r\n}\r\n.not-found-header{\r\n    margin-top: 98px;\r\n}\r\n#error-button{ \r\n    border-radius: 10px;\r\n    margin: 16px 0px;\r\n    padding: 10px 10px;\r\n    border: none;\r\n    color: black;\r\n    width: 200px;\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n}\r\n.error-link{\r\n    display: flex;\r\n}\r\n.nav-back{\r\n    background-color: var(--navigatorTheme);\r\n    text-decoration: none;\r\n}\r\n.main-container{\r\n    height: 78.7vh;\r\n}\r\n#take-home{\r\n    color: white;\r\n    font-weight: bold;\r\n    font-size: 14px;\r\n    padding-top:1px;\r\n    text-decoration: none;\r\n}\r\n#FaHome{\r\n    height:22px;\r\n    width:22px;\r\n    padding: 1px 6px;\r\n    color: white;\r\n}\r\nnav{\r\n    position: sticky;\r\n    background-color: var(--navigatorTheme);\r\n    display: flex;\r\n    justify-content: space-between;    \r\n}\r\n\r\n#navigator-container{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    margin: 16px 12px;\r\n}\r\n\r\n.nav-btn{\r\n    padding: 6px 14px;\r\n    color: white;\r\n    font-size:20px;\r\n    font-weight:bold;\r\n    font-family: 'Poppins', sans-serif;\r\n    border:none;\r\n    text-decoration: none;\r\n}\r\n\r\n.nav-btn:hover{\r\n    background-color: white;\r\n    color:var(--navigatorTheme);\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n#home-logo{\r\n    background-color: var(--navigatorTheme);\r\n    display: flex;\r\n    margin: 16px 12px;\r\n}\r\n#srch-btn{\r\n    margin-top: 6px;\r\n    width: 20px;\r\n    height: 20px;\r\n    color: white;\r\n}\r\n#srch-btn:hover{\r\n    background-color: white;\r\n    color:var(--navigatorTheme);\r\n    cursor: pointer;\r\n}\r\n#home-link{\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: bold;\r\n    background-color: var(--navigatorTheme);\r\n    text-decoration: none;\r\n    padding: 6px 8px;\r\n    color: white;\r\n    font-size: 20px;\r\n}\r\n#git-symbol{\r\n    background-color: var(--navigatorTheme);\r\n    padding:2px 0px;\r\n    color: white;\r\n    height: 38px;\r\n    width : 38px;\r\n}\r\n#about-container{\r\n    position: relative;\r\n    top: 30px;\r\n    left: 32px;\r\n    width: 800px;\r\n}\r\n.about-headline{\r\n    font-weight: bold;\r\n    font-size: 56px;\r\n}\r\n#home-container{\r\n    text-align: center;\r\n}\r\n#user-container{\r\n    overflow-y: scroll;\r\n    color: white;\r\n}\r\n.profile-image{\r\n    border: 2px solid white;\r\n    height: 190px;\r\n    width: 190px;\r\n    border-radius: 100%;\r\n    position: relative;\r\n    right: 12px;\r\n}\r\n#profile-header{\r\n    margin-top: 12px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#profile-name-and-login{\r\n    height: 170px;\r\n    position: relative;\r\n    top: 8px;\r\n    left: 12px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n#profile-name{\r\n    font-size: 52px;\r\n    font-weight: bold;\r\n}\r\n#profile-login{\r\n    font-size: 32px;\r\n}\r\n#profile-location{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n#visit-github{\r\n    padding: 8px;\r\n    width: 196px;\r\n    background-color: var(--navigatorTheme);\r\n    border-radius: 15px;\r\n    margin-top: 10px;\r\n    font-size: 16px;\r\n}\r\n#visit-github:hover{\r\n    cursor: pointer;\r\n}\r\n#visit-github-icon{\r\n    background-color: var(--navigatorTheme);\r\n    position: relative;\r\n    top:2.5px;\r\n    left:3px;\r\n}\r\n#profile-attributes{\r\n    margin: 12px 4px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#attribute-layout{\r\n    width: 580px;\r\n    display: flex;\r\n    justify-content: left;\r\n}\r\n.attribute-item{\r\n    margin: 6px 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n.attribute-definition{\r\n    width: 152px;\r\n    padding: 6px 14px;\r\n    display: flex;\r\n    justify-content: space-around;\r\n    border-top-left-radius: 15px;\r\n    border-top-right-radius: 15px;\r\n    background-color: var(--navigatorTheme);\r\n}\r\n.attribute-icon{\r\n    background-color: var(--navigatorTheme);\r\n    position: relative;\r\n    top: 4px;\r\n    right: 4px;\r\n}\r\n#twitter-icon{\r\n    color: #1DA1F2;\r\n}\r\n#book-icon{\r\n    color: brown;\r\n}\r\n.attribute-value{\r\n    overflow-x: hidden;\r\n    height: 30px;\r\n    width: 152px;\r\n    padding: 6px 11px;\r\n    text-align: center;\r\n    border: 3px solid var(--navigatorTheme);\r\n    color: white;\r\n}\r\n#profile-body{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n#bio-container{\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#bio-layout{\r\n    width: 580px;\r\n    display: flex;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n}\r\n#bio-header{\r\n    padding:2px 8px;\r\n    background-color: var(--navigatorTheme);\r\n    border-top-right-radius: 15px;\r\n    border-top-left-radius: 15px;\r\n}\r\n#bio-body{\r\n    padding:0px 3px;\r\n    border: 4px solid var(--navigatorTheme);\r\n}\r\n#follow-container{\r\n    display: flex;\r\n    justify-content: center;\r\n    \r\n}\r\n#follow-layout{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    margin-top: 12px;\r\n    width: 590px;\r\n}\r\n.showcase-stats{\r\n    display: flex;\r\n    justify-content: center;\r\n    width: 220px;\r\n    height: 80px;\r\n    padding: 8px;\r\n    margin: 8px;\r\n    border: 3px solid white;\r\n    border-radius: 15px;\r\n}\r\n.showcase{\r\n    display: flex;\r\n    flex-direction: column;\r\n    text-align: center;\r\n}\r\n.showcase-title{\r\n    color: var(--navigatorTheme);\r\n    font-weight: bolder;\r\n}\r\n.showcase-body{\r\n    font-size: xx-large;\r\n    font-weight: bold;\r\n}\r\n.showcase-icon{\r\n    position: relative;\r\n    top: 18px;\r\n    left: 11px;\r\n    color: purple;\r\n    height: 42px;\r\n    width: 42px;\r\n}\r\n#code-pen-icon{\r\n    top: 22px !important;\r\n    left: 6px !important;\r\n}\r\n#repo-title{\r\n    text-align: center;\r\n}\r\n#repo-container{\r\n    margin-bottom: 65px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#repo-layout{\r\n    display: grid;\r\n    grid-template-columns: auto auto auto;\r\n}\r\n#repo-item{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-evenly;\r\n    height: 100px;\r\n    border: 3px solid var(--navigatorTheme);\r\n    border-radius: 15px;\r\n    padding: 6px 6px 2px 6px;\r\n    margin: 8px 8px;\r\n}\r\n#repo-item:hover{\r\n    cursor: pointer;\r\n    background-color: var(--navigatorTheme);\r\n}\r\n.repo-header{\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n}\r\n.repo-description{\r\n    height: 26px;\r\n    overflow-y: scroll;\r\n}\r\n.repo-link-icon{\r\n    position: relative;\r\n    top: 4px;\r\n    margin-right: 6px;\r\n}\r\n.repo-response{\r\n    display: flex;\r\n    justify-content: start;\r\n}\r\n.repo-response-item{\r\n    margin: 0px 4px;\r\n    padding: 4px;\r\n}\r\n.repo-response-icon{\r\n    background-color: transparent;\r\n    position: relative;\r\n    top: 2px;\r\n}\r\n#repo-response-viewed{\r\n    background-color: rgba(0,0,255,0.15);\r\n    color: blue;\r\n    border-radius: 15px;\r\n}\r\n#repo-response-starred{\r\n    background-color: rgba(255,255,0,0.15);\r\n    color: yellow;\r\n    border-radius: 15px;\r\n}\r\n#repo-response-issues{\r\n    background-color: rgba(255,0,0,0.15);\r\n    color: red;\r\n    border-radius: 15px;\r\n}\r\n#repo-response-forks{\r\n    background-color: rgba(0,255,0,0.15);\r\n    color: green;\r\n    border-radius: 15px;\r\n}\r\n\r\n#code-icon{\r\n    padding-top: 26px;\r\n    height: 60px;\r\n    width: 60px;\r\n}\r\n#home-text{\r\n    font-size: 62px;\r\n    padding-top: 6px;\r\n}\r\n#search-container{\r\n    overflow-y: scroll;\r\n}\r\n#search-bar{\r\n    margin-top: 36px;\r\n    height: 52px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#search-input{\r\n    width: 64vw;\r\n    font-family: 'Poppins';\r\n    padding: 0px 8px;\r\n    font-size: 26px;\r\n    line-height: 1.6;\r\n    border-radius: 15px;\r\n    border: none;\r\n    background-color: white;\r\n}\r\n#searchbar-button{\r\n    background:none;\r\n    position: relative;\r\n    border: none;\r\n    right: 42px;\r\n    top: 1px;\r\n}\r\n#searchbar-clear{\r\n    background:none;\r\n    position: relative;\r\n    border: none;\r\n    right: 116px;   \r\n}\r\n#searchbar-clear:hover{\r\n    cursor: pointer;\r\n}\r\n#searchbar-button:hover{\r\n    cursor: pointer;\r\n}\r\n#searchbar-logo{\r\n    width: 28px;\r\n    height: 28px;\r\n    color: var(--navigatorTheme);\r\n    background-color: white;\r\n}\r\n#searchbar-trash{\r\n    width: 28px;\r\n    height: 28px;\r\n    color: var(--navigatorTheme);\r\n    background-color: white;\r\n}\r\n#search-results{\r\n    padding-top: 20px;\r\n}\r\n#loading-container{\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n.loading-svg{\r\n    height:48px;\r\n    width: 48px;\r\n}\r\n.body-text{\r\n    color: white;\r\n}\r\n.no-found{\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    text-align: center;\r\n}\r\n.grider{\r\n    padding: 12px;\r\n    margin: 12px;\r\n    background-color: yellow;\r\n}\r\n.grid-container{\r\n    display: grid;\r\n    grid-template-columns: auto auto auto;\r\n}\r\n@media screen and (max-width: 992px) {\r\n    .grid-container{\r\n        display: grid;\r\n        grid-template-columns: auto auto;\r\n    }\r\n    #profile-name{\r\n        font-size: 36px;\r\n        font-weight: bold;\r\n    }\r\n    #profile-name-and-login{\r\n        top: 26px;\r\n    }\r\n    #repo-layout{\r\n        grid-template-columns: auto;\r\n    }    \r\n    #repo-item{\r\n        min-width: 84vw;\r\n    }\r\n}\r\n.clear-container{\r\n    display: flex;\r\n    justify-content: space-around;\r\n    padding-bottom: 8px;\r\n}\r\n.clear-text{\r\n    background-color: var(--navigatorTheme);\r\n    font-size: 14px;\r\n    color: white;\r\n    padding: 12px;\r\n    border-radius: 15px;\r\n}\r\n.user-container{\r\n    background-color: var(--navigatorTheme);\r\n    border-radius: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: 12px;\r\n    padding: 12px;\r\n}\r\n.user-image{\r\n    border: 2px solid black;\r\n    height: 60px;\r\n    width: 60px;\r\n    border-radius: 100%;\r\n}\r\n.user-text{\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-left: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.user-link{\r\n    font-size: 12px;\r\n    color: rgba(211,211,211,0.5);\r\n}\r\nfooter{\r\n    width: 98.75vw;\r\n    z-index:0;\r\n    position: sticky;\r\n    bottom:0px;\r\n    color: white;\r\n    padding: 8px;\r\n    background-color: var(--navigatorTheme);\r\n    justify-content: center;\r\n}", "",{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAEA;IACI;;;KAGC;IACD,0BAA0B;IAC1B,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI;QACI,aAAa;QACb,gCAAgC;IACpC;IACA;QACI,eAAe;QACf,iBAAiB;IACrB;IACA;QACI,SAAS;IACb;IACA;QACI,2BAA2B;IAC/B;AACJ;;AAEA;IACI,wCAAwC;AAC5C;AACA;IACI,UAAU;IACV,kCAAkC;IAClC,gBAAgB;AACpB;AACA;IACI,qBAAqB;AACzB;AACA;IACI,eAAe;AACnB;AACA;IACI,aAAa;IACb,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,aAAa;IACb,6BAA6B;AACjC;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,qBAAqB;IACrB,YAAY;AAChB;AACA;IACI,gBAAgB;AACpB;AACA;IACI,mBAAmB;IACnB,gBAAgB;IAChB,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;AACA;IACI,aAAa;AACjB;AACA;IACI,uCAAuC;IACvC,qBAAqB;AACzB;AACA;IACI,cAAc;AAClB;AACA;IACI,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,eAAe;IACf,qBAAqB;AACzB;AACA;IACI,WAAW;IACX,UAAU;IACV,gBAAgB;IAChB,YAAY;AAChB;AACA;IACI,gBAAgB;IAChB,uCAAuC;IACvC,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,yBAAyB;IACzB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,YAAY;IACZ,cAAc;IACd,gBAAgB;IAChB,kCAAkC;IAClC,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,uBAAuB;IACvB,2BAA2B;IAC3B,eAAe;AACnB;;;;AAIA;IACI,uCAAuC;IACvC,aAAa;IACb,iBAAiB;AACrB;AACA;IACI,eAAe;IACf,WAAW;IACX,YAAY;IACZ,YAAY;AAChB;AACA;IACI,uBAAuB;IACvB,2BAA2B;IAC3B,eAAe;AACnB;AACA;IACI,kCAAkC;IAClC,iBAAiB;IACjB,uCAAuC;IACvC,qBAAqB;IACrB,gBAAgB;IAChB,YAAY;IACZ,eAAe;AACnB;AACA;IACI,uCAAuC;IACvC,eAAe;IACf,YAAY;IACZ,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,SAAS;IACT,UAAU;IACV,YAAY;AAChB;AACA;IACI,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,kBAAkB;IAClB,YAAY;AAChB;AACA;IACI,uBAAuB;IACvB,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,kBAAkB;IAClB,WAAW;AACf;AACA;IACI,gBAAgB;IAChB,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,kBAAkB;IAClB,QAAQ;IACR,UAAU;IACV,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,iBAAiB;AACrB;AACA;IACI,eAAe;AACnB;AACA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,YAAY;IACZ,YAAY;IACZ,uCAAuC;IACvC,mBAAmB;IACnB,gBAAgB;IAChB,eAAe;AACnB;AACA;IACI,eAAe;AACnB;AACA;IACI,uCAAuC;IACvC,kBAAkB;IAClB,SAAS;IACT,QAAQ;AACZ;AACA;IACI,gBAAgB;IAChB,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,YAAY;IACZ,aAAa;IACb,qBAAqB;AACzB;AACA;IACI,eAAe;IACf,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;AACA;IACI,YAAY;IACZ,iBAAiB;IACjB,aAAa;IACb,6BAA6B;IAC7B,4BAA4B;IAC5B,6BAA6B;IAC7B,uCAAuC;AAC3C;AACA;IACI,uCAAuC;IACvC,kBAAkB;IAClB,QAAQ;IACR,UAAU;AACd;AACA;IACI,cAAc;AAClB;AACA;IACI,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,iBAAiB;IACjB,kBAAkB;IAClB,uCAAuC;IACvC,YAAY;AAChB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,YAAY;IACZ,aAAa;IACb,uBAAuB;IACvB,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,uCAAuC;IACvC,6BAA6B;IAC7B,4BAA4B;AAChC;AACA;IACI,eAAe;IACf,uCAAuC;AAC3C;AACA;IACI,aAAa;IACb,uBAAuB;;AAE3B;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,gBAAgB;IAChB,YAAY;AAChB;AACA;IACI,aAAa;IACb,uBAAuB;IACvB,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,WAAW;IACX,uBAAuB;IACvB,mBAAmB;AACvB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,kBAAkB;AACtB;AACA;IACI,4BAA4B;IAC5B,mBAAmB;AACvB;AACA;IACI,mBAAmB;IACnB,iBAAiB;AACrB;AACA;IACI,kBAAkB;IAClB,SAAS;IACT,UAAU;IACV,aAAa;IACb,YAAY;IACZ,WAAW;AACf;AACA;IACI,oBAAoB;IACpB,oBAAoB;AACxB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,qCAAqC;AACzC;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,aAAa;IACb,uCAAuC;IACvC,mBAAmB;IACnB,wBAAwB;IACxB,eAAe;AACnB;AACA;IACI,eAAe;IACf,uCAAuC;AAC3C;AACA;IACI,eAAe;IACf,iBAAiB;AACrB;AACA;IACI,YAAY;IACZ,kBAAkB;AACtB;AACA;IACI,kBAAkB;IAClB,QAAQ;IACR,iBAAiB;AACrB;AACA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,YAAY;AAChB;AACA;IACI,6BAA6B;IAC7B,kBAAkB;IAClB,QAAQ;AACZ;AACA;IACI,oCAAoC;IACpC,WAAW;IACX,mBAAmB;AACvB;AACA;IACI,sCAAsC;IACtC,aAAa;IACb,mBAAmB;AACvB;AACA;IACI,oCAAoC;IACpC,UAAU;IACV,mBAAmB;AACvB;AACA;IACI,oCAAoC;IACpC,YAAY;IACZ,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,YAAY;IACZ,WAAW;AACf;AACA;IACI,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,WAAW;IACX,sBAAsB;IACtB,gBAAgB;IAChB,eAAe;IACf,gBAAgB;IAChB,mBAAmB;IACnB,YAAY;IACZ,uBAAuB;AAC3B;AACA;IACI,eAAe;IACf,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,QAAQ;AACZ;AACA;IACI,eAAe;IACf,kBAAkB;IAClB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,eAAe;AACnB;AACA;IACI,eAAe;AACnB;AACA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,uBAAuB;AAC3B;AACA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,uBAAuB;AAC3B;AACA;IACI,iBAAiB;AACrB;AACA;IACI,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,WAAW;IACX,WAAW;AACf;AACA;IACI,YAAY;AAChB;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,kBAAkB;AACtB;AACA;IACI,aAAa;IACb,YAAY;IACZ,wBAAwB;AAC5B;AACA;IACI,aAAa;IACb,qCAAqC;AACzC;AACA;IACI;QACI,aAAa;QACb,gCAAgC;IACpC;IACA;QACI,eAAe;QACf,iBAAiB;IACrB;IACA;QACI,SAAS;IACb;IACA;QACI,2BAA2B;IAC/B;IACA;QACI,eAAe;IACnB;AACJ;AACA;IACI,aAAa;IACb,6BAA6B;IAC7B,mBAAmB;AACvB;AACA;IACI,uCAAuC;IACvC,eAAe;IACf,YAAY;IACZ,aAAa;IACb,mBAAmB;AACvB;AACA;IACI,uCAAuC;IACvC,mBAAmB;IACnB,aAAa;IACb,mBAAmB;IACnB,YAAY;IACZ,aAAa;AACjB;AACA;IACI,uBAAuB;IACvB,YAAY;IACZ,WAAW;IACX,mBAAmB;AACvB;AACA;IACI,iBAAiB;IACjB,eAAe;IACf,iBAAiB;IACjB,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,4BAA4B;AAChC;AACA;IACI,cAAc;IACd,SAAS;IACT,gBAAgB;IAChB,UAAU;IACV,YAAY;IACZ,YAAY;IACZ,uCAAuC;IACvC,uBAAuB;AAC3B","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');\r\n\r\n:root {\r\n    /*\r\n    --backGroundTheme: #266867;\r\n    --navigatorTheme: #1A4645;\r\n    */\r\n    --backGroundTheme: #121212;\r\n    --navigatorTheme: #3b3b3d;\r\n    --redTheme: #DF292D;\r\n}\r\n\r\n@media screen and (max-width: 992px) {\r\n    .grid-container{\r\n        display: grid;\r\n        grid-template-columns: auto auto;\r\n    }\r\n    #profile-name{\r\n        font-size: 36px;\r\n        font-weight: bold;\r\n    }\r\n    #profile-name-and-login{\r\n        top: 26px;\r\n    }\r\n    #repo-layout{\r\n        grid-template-columns: auto;\r\n    }    \r\n}\r\n\r\n* {\r\n    background-color: var(--backGroundTheme);\r\n}\r\nbody {\r\n    margin:0px;\r\n    font-family: 'Poppins', sans-serif;\r\n    line-height: 1.6;\r\n}\r\na {\r\n    text-decoration: none;\r\n}\r\na:hover{\r\n    cursor: pointer;\r\n}\r\n#main-flow{\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n#not-found-container-container{\r\n    display: flex;\r\n    justify-content: space-around;\r\n}\r\n#not-found-container{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-content: center;\r\n    color: white;\r\n}\r\n.not-found-header{\r\n    margin-top: 98px;\r\n}\r\n#error-button{ \r\n    border-radius: 10px;\r\n    margin: 16px 0px;\r\n    padding: 10px 10px;\r\n    border: none;\r\n    color: black;\r\n    width: 200px;\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n}\r\n.error-link{\r\n    display: flex;\r\n}\r\n.nav-back{\r\n    background-color: var(--navigatorTheme);\r\n    text-decoration: none;\r\n}\r\n.main-container{\r\n    height: 78.7vh;\r\n}\r\n#take-home{\r\n    color: white;\r\n    font-weight: bold;\r\n    font-size: 14px;\r\n    padding-top:1px;\r\n    text-decoration: none;\r\n}\r\n#FaHome{\r\n    height:22px;\r\n    width:22px;\r\n    padding: 1px 6px;\r\n    color: white;\r\n}\r\nnav{\r\n    position: sticky;\r\n    background-color: var(--navigatorTheme);\r\n    display: flex;\r\n    justify-content: space-between;    \r\n}\r\n\r\n#navigator-container{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    margin: 16px 12px;\r\n}\r\n\r\n.nav-btn{\r\n    padding: 6px 14px;\r\n    color: white;\r\n    font-size:20px;\r\n    font-weight:bold;\r\n    font-family: 'Poppins', sans-serif;\r\n    border:none;\r\n    text-decoration: none;\r\n}\r\n\r\n.nav-btn:hover{\r\n    background-color: white;\r\n    color:var(--navigatorTheme);\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n#home-logo{\r\n    background-color: var(--navigatorTheme);\r\n    display: flex;\r\n    margin: 16px 12px;\r\n}\r\n#srch-btn{\r\n    margin-top: 6px;\r\n    width: 20px;\r\n    height: 20px;\r\n    color: white;\r\n}\r\n#srch-btn:hover{\r\n    background-color: white;\r\n    color:var(--navigatorTheme);\r\n    cursor: pointer;\r\n}\r\n#home-link{\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: bold;\r\n    background-color: var(--navigatorTheme);\r\n    text-decoration: none;\r\n    padding: 6px 8px;\r\n    color: white;\r\n    font-size: 20px;\r\n}\r\n#git-symbol{\r\n    background-color: var(--navigatorTheme);\r\n    padding:2px 0px;\r\n    color: white;\r\n    height: 38px;\r\n    width : 38px;\r\n}\r\n#about-container{\r\n    position: relative;\r\n    top: 30px;\r\n    left: 32px;\r\n    width: 800px;\r\n}\r\n.about-headline{\r\n    font-weight: bold;\r\n    font-size: 56px;\r\n}\r\n#home-container{\r\n    text-align: center;\r\n}\r\n#user-container{\r\n    overflow-y: scroll;\r\n    color: white;\r\n}\r\n.profile-image{\r\n    border: 2px solid white;\r\n    height: 190px;\r\n    width: 190px;\r\n    border-radius: 100%;\r\n    position: relative;\r\n    right: 12px;\r\n}\r\n#profile-header{\r\n    margin-top: 12px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#profile-name-and-login{\r\n    height: 170px;\r\n    position: relative;\r\n    top: 8px;\r\n    left: 12px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n#profile-name{\r\n    font-size: 52px;\r\n    font-weight: bold;\r\n}\r\n#profile-login{\r\n    font-size: 32px;\r\n}\r\n#profile-location{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n#visit-github{\r\n    padding: 8px;\r\n    width: 196px;\r\n    background-color: var(--navigatorTheme);\r\n    border-radius: 15px;\r\n    margin-top: 10px;\r\n    font-size: 16px;\r\n}\r\n#visit-github:hover{\r\n    cursor: pointer;\r\n}\r\n#visit-github-icon{\r\n    background-color: var(--navigatorTheme);\r\n    position: relative;\r\n    top:2.5px;\r\n    left:3px;\r\n}\r\n#profile-attributes{\r\n    margin: 12px 4px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#attribute-layout{\r\n    width: 580px;\r\n    display: flex;\r\n    justify-content: left;\r\n}\r\n.attribute-item{\r\n    margin: 6px 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n.attribute-definition{\r\n    width: 152px;\r\n    padding: 6px 14px;\r\n    display: flex;\r\n    justify-content: space-around;\r\n    border-top-left-radius: 15px;\r\n    border-top-right-radius: 15px;\r\n    background-color: var(--navigatorTheme);\r\n}\r\n.attribute-icon{\r\n    background-color: var(--navigatorTheme);\r\n    position: relative;\r\n    top: 4px;\r\n    right: 4px;\r\n}\r\n#twitter-icon{\r\n    color: #1DA1F2;\r\n}\r\n#book-icon{\r\n    color: brown;\r\n}\r\n.attribute-value{\r\n    overflow-x: hidden;\r\n    height: 30px;\r\n    width: 152px;\r\n    padding: 6px 11px;\r\n    text-align: center;\r\n    border: 3px solid var(--navigatorTheme);\r\n    color: white;\r\n}\r\n#profile-body{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n#bio-container{\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#bio-layout{\r\n    width: 580px;\r\n    display: flex;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n}\r\n#bio-header{\r\n    padding:2px 8px;\r\n    background-color: var(--navigatorTheme);\r\n    border-top-right-radius: 15px;\r\n    border-top-left-radius: 15px;\r\n}\r\n#bio-body{\r\n    padding:0px 3px;\r\n    border: 4px solid var(--navigatorTheme);\r\n}\r\n#follow-container{\r\n    display: flex;\r\n    justify-content: center;\r\n    \r\n}\r\n#follow-layout{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    margin-top: 12px;\r\n    width: 590px;\r\n}\r\n.showcase-stats{\r\n    display: flex;\r\n    justify-content: center;\r\n    width: 220px;\r\n    height: 80px;\r\n    padding: 8px;\r\n    margin: 8px;\r\n    border: 3px solid white;\r\n    border-radius: 15px;\r\n}\r\n.showcase{\r\n    display: flex;\r\n    flex-direction: column;\r\n    text-align: center;\r\n}\r\n.showcase-title{\r\n    color: var(--navigatorTheme);\r\n    font-weight: bolder;\r\n}\r\n.showcase-body{\r\n    font-size: xx-large;\r\n    font-weight: bold;\r\n}\r\n.showcase-icon{\r\n    position: relative;\r\n    top: 18px;\r\n    left: 11px;\r\n    color: purple;\r\n    height: 42px;\r\n    width: 42px;\r\n}\r\n#code-pen-icon{\r\n    top: 22px !important;\r\n    left: 6px !important;\r\n}\r\n#repo-title{\r\n    text-align: center;\r\n}\r\n#repo-container{\r\n    margin-bottom: 65px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#repo-layout{\r\n    display: grid;\r\n    grid-template-columns: auto auto auto;\r\n}\r\n#repo-item{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-evenly;\r\n    height: 100px;\r\n    border: 3px solid var(--navigatorTheme);\r\n    border-radius: 15px;\r\n    padding: 6px 6px 2px 6px;\r\n    margin: 8px 8px;\r\n}\r\n#repo-item:hover{\r\n    cursor: pointer;\r\n    background-color: var(--navigatorTheme);\r\n}\r\n.repo-header{\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n}\r\n.repo-description{\r\n    height: 26px;\r\n    overflow-y: scroll;\r\n}\r\n.repo-link-icon{\r\n    position: relative;\r\n    top: 4px;\r\n    margin-right: 6px;\r\n}\r\n.repo-response{\r\n    display: flex;\r\n    justify-content: start;\r\n}\r\n.repo-response-item{\r\n    margin: 0px 4px;\r\n    padding: 4px;\r\n}\r\n.repo-response-icon{\r\n    background-color: transparent;\r\n    position: relative;\r\n    top: 2px;\r\n}\r\n#repo-response-viewed{\r\n    background-color: rgba(0,0,255,0.15);\r\n    color: blue;\r\n    border-radius: 15px;\r\n}\r\n#repo-response-starred{\r\n    background-color: rgba(255,255,0,0.15);\r\n    color: yellow;\r\n    border-radius: 15px;\r\n}\r\n#repo-response-issues{\r\n    background-color: rgba(255,0,0,0.15);\r\n    color: red;\r\n    border-radius: 15px;\r\n}\r\n#repo-response-forks{\r\n    background-color: rgba(0,255,0,0.15);\r\n    color: green;\r\n    border-radius: 15px;\r\n}\r\n\r\n#code-icon{\r\n    padding-top: 26px;\r\n    height: 60px;\r\n    width: 60px;\r\n}\r\n#home-text{\r\n    font-size: 62px;\r\n    padding-top: 6px;\r\n}\r\n#search-container{\r\n    overflow-y: scroll;\r\n}\r\n#search-bar{\r\n    margin-top: 36px;\r\n    height: 52px;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n#search-input{\r\n    width: 64vw;\r\n    font-family: 'Poppins';\r\n    padding: 0px 8px;\r\n    font-size: 26px;\r\n    line-height: 1.6;\r\n    border-radius: 15px;\r\n    border: none;\r\n    background-color: white;\r\n}\r\n#searchbar-button{\r\n    background:none;\r\n    position: relative;\r\n    border: none;\r\n    right: 42px;\r\n    top: 1px;\r\n}\r\n#searchbar-clear{\r\n    background:none;\r\n    position: relative;\r\n    border: none;\r\n    right: 116px;   \r\n}\r\n#searchbar-clear:hover{\r\n    cursor: pointer;\r\n}\r\n#searchbar-button:hover{\r\n    cursor: pointer;\r\n}\r\n#searchbar-logo{\r\n    width: 28px;\r\n    height: 28px;\r\n    color: var(--navigatorTheme);\r\n    background-color: white;\r\n}\r\n#searchbar-trash{\r\n    width: 28px;\r\n    height: 28px;\r\n    color: var(--navigatorTheme);\r\n    background-color: white;\r\n}\r\n#search-results{\r\n    padding-top: 20px;\r\n}\r\n#loading-container{\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n.loading-svg{\r\n    height:48px;\r\n    width: 48px;\r\n}\r\n.body-text{\r\n    color: white;\r\n}\r\n.no-found{\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    text-align: center;\r\n}\r\n.grider{\r\n    padding: 12px;\r\n    margin: 12px;\r\n    background-color: yellow;\r\n}\r\n.grid-container{\r\n    display: grid;\r\n    grid-template-columns: auto auto auto;\r\n}\r\n@media screen and (max-width: 992px) {\r\n    .grid-container{\r\n        display: grid;\r\n        grid-template-columns: auto auto;\r\n    }\r\n    #profile-name{\r\n        font-size: 36px;\r\n        font-weight: bold;\r\n    }\r\n    #profile-name-and-login{\r\n        top: 26px;\r\n    }\r\n    #repo-layout{\r\n        grid-template-columns: auto;\r\n    }    \r\n    #repo-item{\r\n        min-width: 84vw;\r\n    }\r\n}\r\n.clear-container{\r\n    display: flex;\r\n    justify-content: space-around;\r\n    padding-bottom: 8px;\r\n}\r\n.clear-text{\r\n    background-color: var(--navigatorTheme);\r\n    font-size: 14px;\r\n    color: white;\r\n    padding: 12px;\r\n    border-radius: 15px;\r\n}\r\n.user-container{\r\n    background-color: var(--navigatorTheme);\r\n    border-radius: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: 12px;\r\n    padding: 12px;\r\n}\r\n.user-image{\r\n    border: 2px solid black;\r\n    height: 60px;\r\n    width: 60px;\r\n    border-radius: 100%;\r\n}\r\n.user-text{\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n    margin-left: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.user-link{\r\n    font-size: 12px;\r\n    color: rgba(211,211,211,0.5);\r\n}\r\nfooter{\r\n    width: 98.75vw;\r\n    z-index:0;\r\n    position: sticky;\r\n    bottom:0px;\r\n    color: white;\r\n    padding: 8px;\r\n    background-color: var(--navigatorTheme);\r\n    justify-content: center;\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var _components_layout_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/layout/navbar */ "./src/components/layout/navbar.jsx");
+/* harmony import */ var _components_layout_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/layout/footer */ "./src/components/layout/footer.jsx");
+/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/home */ "./src/pages/home.jsx");
+/* harmony import */ var _pages_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/about */ "./src/pages/about.jsx");
+/* harmony import */ var _pages_notfound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/notfound */ "./src/pages/notfound.jsx");
+/* harmony import */ var _pages_search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/search */ "./src/pages/search.jsx");
+/* harmony import */ var _context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./context/github/GitHubContext */ "./src/context/github/GitHubContext.js");
+/* harmony import */ var _pages_UserProfile__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/UserProfile */ "./src/pages/UserProfile.jsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\App.js";
+
+
+
+
+
+
+
+
+
+
+function App() {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_7__["GitHubProvider"], {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["BrowserRouter"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])("div", {
+        id: "main-flow",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_components_layout_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          title: "Github finder"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 21
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Routes"], {
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+              path: "/",
+              element: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_pages_home__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 20,
+                columnNumber: 58
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 20,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+              path: "/search",
+              element: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_pages_search__WEBPACK_IMPORTED_MODULE_6__["default"], {}, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 21,
+                columnNumber: 64
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 21,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+              path: "/user/:login",
+              element: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_pages_UserProfile__WEBPACK_IMPORTED_MODULE_8__["default"], {}, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 22,
+                columnNumber: 69
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 22,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+              path: "/about",
+              element: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_pages_about__WEBPACK_IMPORTED_MODULE_4__["default"], {}, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 23,
+                columnNumber: 63
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 23,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+              path: "/notfound",
+              element: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_pages_notfound__WEBPACK_IMPORTED_MODULE_5__["default"], {}, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 24,
+                columnNumber: 66
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 24,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+              path: "*",
+              element: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_pages_notfound__WEBPACK_IMPORTED_MODULE_5__["default"], {}, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 25,
+                columnNumber: 58
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 25,
+              columnNumber: 33
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 29
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 25
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(_components_layout_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {}, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 21
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 17
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 13
+    }, this)
+  }, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 14,
+    columnNumber: 9
+  }, this);
+}
+_c = App;
+/* harmony default export */ __webpack_exports__["default"] = (App);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "App");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/layout/footer.jsx":
+/*!******************************************!*\
+  !*** ./src/components/layout/footer.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\components\\layout\\footer.jsx";
+
+function Footer() {
+  const footerYear = new Date().getFullYear();
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("footer", {
+    children: ["Copyright \xA9 ", footerYear, " by FakeMock corp."]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 7,
+    columnNumber: 9
+  }, this);
+}
+_c = Footer;
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Footer");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/layout/navbar.jsx":
+/*!******************************************!*\
+  !*** ./src/components/layout/navbar.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\components\\layout\\navbar.jsx";
+
+
+
+
+
+function Navbar(_ref) {
+  let {
+    title
+  } = _ref;
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("nav", {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
+      id: "home-logo",
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaGithub"], {
+        id: "git-symbol"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 13
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("span", {
+        id: "home-link",
+        children: title
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 13
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 9
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
+      id: "navigator-container",
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/",
+        className: "nav-btn nav-back",
+        children: "Home"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/about",
+        className: "nav-btn nav-back",
+        children: "About"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 19,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/search",
+        id: "nav-back",
+        className: "nav-btn nav-back",
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaSearch"], {
+          id: "srch-btn",
+          className: "nav-back"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 17
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 9
+  }, this);
+}
+_c = Navbar;
+Navbar.defaultProps = {
+  title: "This is my github project"
+};
+Navbar.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Navbar");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/repo-components/RepoItem.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/repo-components/RepoItem.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\components\\repo-components\\RepoItem.jsx";
+
+
+function RepoItem(_ref) {
+  let {
+    repo
+  } = _ref;
+  const {
+    name,
+    description,
+    html_url,
+    forks,
+    open_issues,
+    watchers_count,
+    stargazers_count
+  } = repo;
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("a", {
+    href: html_url,
+    target: "_blank",
+    style: {
+      color: "white"
+    },
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+      id: "repo-item",
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+        className: "repo-header",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaLink"], {
+          className: "repo-link-icon"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 17
+        }, this), name]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 13
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+        className: "repo-description",
+        style: {
+          display: description ? 'block' : 'none'
+        },
+        children: description
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 13
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+        className: "repo-response",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+          id: "repo-response-viewed",
+          className: "repo-response-item",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaEye"], {
+            className: "repo-response-icon"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 21
+          }, this), " ", watchers_count]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 17
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+          id: "repo-response-starred",
+          className: "repo-response-item",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaStar"], {
+            className: "repo-response-icon"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 21
+          }, this), " ", stargazers_count]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 29,
+          columnNumber: 17
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+          id: "repo-response-issues",
+          className: "repo-response-item",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaInfo"], {
+            className: "repo-response-icon"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 21
+          }, this), " ", open_issues]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 17
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+          id: "repo-response-forks",
+          className: "repo-response-item",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaUtensils"], {
+            className: "repo-response-icon"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 21
+          }, this), " ", forks]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 35,
+          columnNumber: 17
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 13
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 13
+    }, this)
+  }, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 15,
+    columnNumber: 9
+  }, this);
+}
+_c = RepoItem;
+/* harmony default export */ __webpack_exports__["default"] = (RepoItem);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "RepoItem");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/repo-components/RepoList.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/repo-components/RepoList.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../context/github/GitHubContext */ "./src/context/github/GitHubContext.js");
+/* harmony import */ var _RepoItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RepoItem */ "./src/components/repo-components/RepoItem.jsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\components\\repo-components\\RepoList.jsx",
+  _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+function RepoList() {
+  _s();
+  const {
+    repos
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_1__["default"]);
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["Fragment"], {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("h3", {
+      id: "repo-title",
+      children: "Latest repositories"
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
+      id: "repo-container",
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
+        id: "repo-layout",
+        children: repos.map(item => {
+          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_RepoItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            repo: item
+          }, item.id, false, {
+            fileName: _jsxFileName,
+            lineNumber: 17,
+            columnNumber: 28
+          }, this);
+        })
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 15,
+        columnNumber: 17
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true);
+}
+_s(RepoList, "/OjU7c9RRUOdfOk9GO886tkXsMA=");
+_c = RepoList;
+/* harmony default export */ __webpack_exports__["default"] = (RepoList);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "RepoList");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/user-components/UserItem.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/user-components/UserItem.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\components\\user-components\\UserItem.jsx";
+
+
+function UserItem(_ref) {
+  let {
+    user: {
+      login,
+      avatar_url,
+      html_url
+    }
+  } = _ref;
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+    className: "user-container",
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("img", {
+      className: "user-image",
+      src: avatar_url,
+      alt: "Profile img"
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 13
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+      className: "user-text nav-back",
+      children: [login, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+        to: `/user/${login}`,
+        className: "nav-back user-link",
+        children: "Visit this profile"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 17
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 5,
+    columnNumber: 9
+  }, this);
+}
+_c = UserItem;
+/* harmony default export */ __webpack_exports__["default"] = (UserItem);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "UserItem");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/user-components/Userlist.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/user-components/Userlist.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _resources_loading_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../resources/loading.svg */ "./src/resources/loading.svg");
+/* harmony import */ var _UserItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserItem */ "./src/components/user-components/UserItem.jsx");
+/* harmony import */ var _context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../context/github/GitHubContext */ "./src/context/github/GitHubContext.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\components\\user-components\\Userlist.jsx",
+  _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+
+function Userlist() {
+  _s();
+  const {
+    userList,
+    userLoading
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  if (userLoading) {
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+      id: "loading-container",
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("img", {
+        src: _resources_loading_svg__WEBPACK_IMPORTED_MODULE_1__["default"],
+        className: "loading-svg",
+        alt: "Page is loading..."
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 17
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 13
+    }, this);
+  } else {
+    if (typeof userList.items == 'object') {
+      if (userList.items.length > 0) {
+        return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["Fragment"], {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+            className: "grid-container",
+            children: userList.items.map(user => {
+              return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_UserItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                user: user
+              }, user.id, false, {
+                fileName: _jsxFileName,
+                lineNumber: 25,
+                columnNumber: 36
+              }, this);
+            })
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 25
+          }, this)
+        }, void 0, false);
+      } else {
+        console.log('no results found');
+        return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+          className: "body-text no-found",
+          children: "No results found..."
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 34,
+          columnNumber: 21
+        }, this);
+      }
+    }
+  }
+}
+_s(Userlist, "rFZa6eZP7dZ4Txm9/5gjS0pFUY4=");
+_c = Userlist;
+/* harmony default export */ __webpack_exports__["default"] = (Userlist);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Userlist");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/context/github/GitHubContext.js":
+/*!*********************************************!*\
+  !*** ./src/context/github/GitHubContext.js ***!
+  \*********************************************/
+/*! exports provided: GitHubProvider, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GitHubProvider", function() { return GitHubProvider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _GitHubReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GitHubReducer */ "./src/context/github/GitHubReducer.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\context\\github\\GitHubContext.js",
+  _s = __webpack_require__.$Refresh$.signature();
+
+
+
+const GitHubContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
+const gitHubAddress = "https://api.github.com";
+const gitHubToken = "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";
+const GitHubProvider = _ref => {
+  _s();
+  let {
+    children
+  } = _ref;
+  const initialState = {
+    users: [],
+    user: {},
+    repos: [],
+    loading: false
+  };
+  const [state, dispatch] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_GitHubReducer__WEBPACK_IMPORTED_MODULE_1__["default"], initialState);
+  const searchUsers = async text => {
+    if (text !== '') {
+      dispatch({
+        type: 'START_LOADING'
+      });
+      const params = new URLSearchParams({
+        q: text
+      });
+      const response = await fetch(`${gitHubAddress}/search/users?${params}`, {
+        Headers: {
+          Authorization: `token ${gitHubToken}`
+        }
+      });
+      const {
+        items
+      } = await response.json();
+      dispatch({
+        type: 'GET_USERS',
+        payload: {
+          items
+        }
+      });
+      dispatch({
+        type: 'FINISH_LOADING'
+      });
+    } else {
+      alert('please enter a profile before submition');
+    }
+  };
+  const getUserRepos = async username => {
+    const params = new URLSearchParams({
+      sort: 'created',
+      per_page: 9
+    });
+    const response = await fetch(`${gitHubAddress}/users/${username}/repos?${params}`, {
+      Headers: {
+        Authorization: `token ${gitHubToken}`
+      }
+    });
+    const data = await response.json();
+    dispatch({
+      type: 'GET_REPOS',
+      payload: data
+    });
+  };
+  const getUser = async username => {
+    if (username !== '') {
+      dispatch({
+        type: 'START_LOADING'
+      });
+      const response = await fetch(`${gitHubAddress}/users/${username}`, {
+        Headers: {
+          Authorization: `token ${gitHubToken}`
+        }
+      });
+      if (response.status === 404) {
+        window.location = "/notfound";
+      } else {
+        const user_information = await response.json();
+        dispatch({
+          type: 'GET_USER',
+          payload: user_information
+        });
+        getUserRepos(username);
+        dispatch({
+          type: 'FINISH_LOADING'
+        });
+      }
+    }
+  };
+  const clearUsers = () => {
+    dispatch({
+      type: 'CLEAR_USERS'
+    });
+  };
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(GitHubContext.Provider, {
+    value: {
+      userList: state.users,
+      userLoading: state.loading,
+      currentUser: state.user,
+      repos: state.repos,
+      searchUsers,
+      clearUsers,
+      getUser
+    },
+    children: children
+  }, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 106,
+    columnNumber: 9
+  }, undefined);
+};
+_s(GitHubProvider, "6JWkGZ32UPfojeNx+xqn8ZU8A0Q=");
+_c = GitHubProvider;
+/* harmony default export */ __webpack_exports__["default"] = (GitHubContext);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "GitHubProvider");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/context/github/GitHubReducer.js":
+/*!*********************************************!*\
+  !*** ./src/context/github/GitHubReducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+function GitHubReducer(state, action) {
+  switch (action.type) {
+    case 'START_LOADING':
+      return {
+        ...state,
+        loading: true
+      };
+    case 'GET_USERS':
+      return {
+        ...state,
+        users: action.payload
+      };
+    case 'GET_USER':
+      return {
+        ...state,
+        user: action.payload
+      };
+    case 'GET_REPOS':
+      return {
+        ...state,
+        repos: action.payload
+      };
+    case 'FINISH_LOADING':
+      return {
+        ...state,
+        loading: false
+      };
+    case 'CLEAR_USERS':
+      return {
+        ...state,
+        users: []
+      };
+    default:
+      return state;
+  }
+}
+_c = GitHubReducer;
+/* harmony default export */ __webpack_exports__["default"] = (GitHubReducer);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "GitHubReducer");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/data/app-texts.js":
+/*!*******************************!*\
+  !*** ./src/data/app-texts.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+const aboutText = ["This is the github finder app", `
+    Launched in 2018, the github finder app is a state of the art creation of technology and science.
+    incorporating artificial intelligence, quantum computing and cutting edge analysis, we bring the best
+    github profiles and projects, straight to you. Copyright © 2023 by FakeMock corp.
+    `];
+/* harmony default export */ __webpack_exports__["default"] = (aboutText);
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+if (true) {
+  if (!content.locals || module.hot.invalidate) {
+    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
+  if (!a && b || a && !b) {
+    return false;
+  }
+
+  var p;
+
+  for (p in a) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (a[p] !== b[p]) {
+      return false;
+    }
+  }
+
+  for (p in b) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (!a[p]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+    var oldLocals = content.locals;
+
+    module.hot.accept(
+      /*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css",
+      function () {
+        content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+              content = content.__esModule ? content.default : content;
+
+              if (typeof content === 'string') {
+                content = [[module.i, content, '']];
+              }
+
+              if (!isEqualLocals(oldLocals, content.locals)) {
+                module.hot.invalidate();
+
+                return;
+              }
+
+              oldLocals = content.locals;
+
+              update(content);
+      }
+    )
+  }
+
+  module.hot.dispose(function() {
+    update();
+  });
+}
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _App_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.js */ "./src/App.js");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom_client__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\index.js";
+
+
+
+
+
+const container = document.getElementById('root');
+const root = Object(react_dom_client__WEBPACK_IMPORTED_MODULE_3__["createRoot"])(container);
+root.render( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_App_js__WEBPACK_IMPORTED_MODULE_2__["default"], {}, void 0, false, {
+  fileName: _jsxFileName,
+  lineNumber: 8,
+  columnNumber: 13
+}, undefined));
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/UserProfile.jsx":
+/*!***********************************!*\
+  !*** ./src/pages/UserProfile.jsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var _context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/github/GitHubContext */ "./src/context/github/GitHubContext.js");
+/* harmony import */ var _components_repo_components_RepoList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/repo-components/RepoList */ "./src/components/repo-components/RepoList.jsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\pages\\UserProfile.jsx",
+  _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+
+function UserProfile() {
+  _s();
+  const {
+    getUser,
+    currentUser
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  const params = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    getUser(params.login);
+  }, []);
+  const {
+    name,
+    avatar_url,
+    location,
+    bio,
+    blog,
+    twitter_username,
+    login,
+    html_url,
+    followers,
+    following,
+    public_repos,
+    public_gists,
+    hireable
+  } = currentUser;
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+    id: "user-container",
+    className: "main-container",
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+      id: "profile-header",
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("img", {
+        className: "profile-image",
+        src: avatar_url
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 37,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+        id: "profile-name-and-login",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "profile-name",
+          children: name
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 21
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "profile-login",
+          children: login
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 21
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("a", {
+            href: html_url,
+            style: {
+              color: 'white'
+            },
+            target: "_blank",
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              id: "visit-github",
+              children: ["Visit this github profile", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaGithub"], {
+                id: "visit-github-icon"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 45,
+                columnNumber: 33
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 43,
+              columnNumber: 29
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 42,
+            columnNumber: 25
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 21
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 17
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 13
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+      id: "profile-attributes",
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+        id: "attribute-layout",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "profile-location",
+          className: "attribute-item",
+          style: {
+            display: location ? 'flex' : 'none'
+          },
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "attribute-definition",
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaHome"], {
+              className: "attribute-icon"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 55,
+              columnNumber: 29
+            }, this), "Location"]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 54,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "attribute-value",
+            children: location
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 58,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 21
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "profile-twitter",
+          className: "attribute-item",
+          style: {
+            display: twitter_username ? 'flex' : 'none'
+          },
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            id: "profile-twitter-acount",
+            className: "attribute-definition",
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaTwitter"], {
+              id: "twitter-icon",
+              className: "attribute-icon"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 64,
+              columnNumber: 29
+            }, this), "Twitter"]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 63,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "attribute-value",
+            children: twitter_username
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 67,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 21
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "profile-website",
+          className: "attribute-item",
+          style: {
+            display: blog ? 'flex' : 'none'
+          },
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            id: "profile-website",
+            className: "attribute-definition",
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaBook"], {
+              id: "book-icon",
+              className: "attribute-icon"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 73,
+              columnNumber: 29
+            }, this), "Website"]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "attribute-value",
+            children: blog
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 76,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 71,
+          columnNumber: 21
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 52,
+        columnNumber: 17
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 13
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+      id: "profile-body",
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+        id: "bio-container",
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "bio-layout",
+          style: {
+            display: bio ? 'block' : 'none'
+          },
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            id: "bio-header",
+            children: "About me"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 86,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            id: "bio-body",
+            children: bio
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 89,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 85,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 84,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+        id: "follow-container",
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+          id: "follow-layout",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "showcase-stats",
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              className: "showcase",
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("span", {
+                className: "showcase-title",
+                children: "Following"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 98,
+                columnNumber: 33
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+                className: "showcase-body",
+                children: following
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 99,
+                columnNumber: 33
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 97,
+              columnNumber: 29
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaUsers"], {
+                className: "showcase-icon"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 104,
+                columnNumber: 33
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 103,
+              columnNumber: 29
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 96,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "showcase-stats",
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              className: "showcase",
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("span", {
+                className: "showcase-title",
+                children: "Followers"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 109,
+                columnNumber: 37
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+                className: "showcase-body",
+                children: followers
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 110,
+                columnNumber: 37
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 108,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaUserFriends"], {
+                className: "showcase-icon"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 115,
+                columnNumber: 37
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 114,
+              columnNumber: 33
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 107,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+            className: "showcase-stats",
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              className: "showcase",
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("span", {
+                className: "showcase-title",
+                children: "Public repos"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 120,
+                columnNumber: 37
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+                className: "showcase-body",
+                children: public_repos
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 121,
+                columnNumber: 37
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 119,
+              columnNumber: 33
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaCodepen"], {
+                id: "code-pen-icon",
+                className: "showcase-icon"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 126,
+                columnNumber: 37
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 125,
+              columnNumber: 33
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 118,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 95,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 94,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_components_repo_components_RepoList__WEBPACK_IMPORTED_MODULE_4__["default"], {}, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 131,
+        columnNumber: 17
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 35,
+    columnNumber: 9
+  }, this);
+}
+_s(UserProfile, "H6sj639rVzFmJL/cNkHVox6pV4w=", false, function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"]];
+});
+_c = UserProfile;
+/* harmony default export */ __webpack_exports__["default"] = (UserProfile);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "UserProfile");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/about.jsx":
+/*!*****************************!*\
+  !*** ./src/pages/about.jsx ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var _data_app_texts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/app-texts */ "./src/data/app-texts.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\pages\\about.jsx";
+
+
+function About() {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+    id: "about-container",
+    className: "main-container",
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+      className: "body-text about-headline",
+      children: _data_app_texts__WEBPACK_IMPORTED_MODULE_0__["default"][0]
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+      className: "body-text",
+      children: _data_app_texts__WEBPACK_IMPORTED_MODULE_0__["default"][1]
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 9
+  }, this);
+}
+_c = About;
+/* harmony default export */ __webpack_exports__["default"] = (About);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "About");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/home.jsx":
+/*!****************************!*\
+  !*** ./src/pages/home.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\pages\\home.jsx";
+
+
+function Home() {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+    id: "home-container",
+    className: "body-text main-container",
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaCode"], {
+      id: "code-icon"
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+      id: "home-text",
+      children: ["Explore.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("br", {}, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 13
+      }, this), "Innovate.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("br", {}, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 13
+      }, this), "Develop."]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 9
+  }, this);
+}
+_c = Home;
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Home");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/notfound.jsx":
+/*!********************************!*\
+  !*** ./src/pages/notfound.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\pages\\notfound.jsx";
+
+
+
+function NotFound() {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+    id: "not-found-container-container",
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+      id: "not-found-container",
+      className: "main-container",
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h1", {
+        className: "not-found-header",
+        children: "Oops!"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 13
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("p", {
+        className: "not-found-paragraph",
+        children: "404 - The page was not found!"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 13
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        className: "nav-back",
+        id: "error-button",
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "error-link",
+          to: "/",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+            className: "nav-back",
+            id: "take-home",
+            children: "Take me back home"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaHome"], {
+            className: "nav-back",
+            id: "FaHome"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 17
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 13
+    }, this)
+  }, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 7,
+    columnNumber: 9
+  }, this);
+}
+_c = NotFound;
+/* harmony default export */ __webpack_exports__["default"] = (NotFound);
+{/*
+ <div className="not-found-error main-container">
+            <h1 className="not-found-header">Oops!</h1>
+            <p className="not-found-paragraph">404 - The page was not found!</p>
+                <div className="nav-back" id="error-button">
+                    <Link className="error-link" to="/">
+                        <div className="nav-back" id="take-home">Take me back home</div>
+                        <FaHome className="nav-back" id="FaHome"/>
+                    </Link>
+                </div>
+        </div>
+ */}
+var _c;
+__webpack_require__.$Refresh$.register(_c, "NotFound");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/search.jsx":
+/*!******************************!*\
+  !*** ./src/pages/search.jsx ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context/github/GitHubContext */ "./src/context/github/GitHubContext.js");
+/* harmony import */ var _components_user_components_Userlist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/user-components/Userlist */ "./src/components/user-components/Userlist.jsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\97254\\Documents\\react-learning\\git-hub-project\\src\\pages\\search.jsx",
+  _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+function Search() {
+  _s();
+  const [text, setText] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])('');
+  const {
+    userList,
+    searchUsers,
+    clearUsers
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_context_github_GitHubContext__WEBPACK_IMPORTED_MODULE_2__["default"]);
+  const inputChange = e => setText(e.target.value);
+  const handleKeyDown = e => {
+    if (e.keyCode === 13) {}
+  };
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (text != '') {
+      searchUsers(text);
+      setText('');
+    }
+  };
+  const clearPressed = () => {
+    if (window.confirm("Are you sure you want to clear the user list?")) {
+      clearUsers();
+    }
+  };
+  {/*  onKeyDown={handleKeyDown} */}
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+    id: "search-container",
+    className: "main-container",
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("form", {
+      id: "search-bar",
+      onSubmit: handleSubmit,
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("input", {
+        placeholder: "Enter a profile's name...",
+        id: "search-input",
+        type: "text",
+        value: text,
+        onChange: inputChange
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 35,
+        columnNumber: 21
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("button", {
+        type: "submit",
+        id: "searchbar-button",
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaSearch"], {
+          id: "searchbar-logo"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 25
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 36,
+        columnNumber: 21
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("button", {
+        id: "searchbar-clear",
+        onClick: clearPressed,
+        style: {
+          display: typeof userList.items == 'object' ? userList.items.length > 0 ? 'block' : 'none' : 'none'
+        },
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaTrash"], {
+          id: "searchbar-trash",
+          title: "Clear the users"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 25
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 21
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 17
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+      id: "search-results",
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_components_user_components_Userlist__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 17
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 13
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 33,
+    columnNumber: 9
+  }, this);
+}
+_s(Search, "iuxTTJLZfiEQ8ypUChihgtdRPtI=");
+_c = Search;
+/* harmony default export */ __webpack_exports__["default"] = (Search);
+{/*<FaSearch id='searchbar-logo' />*/}
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Search");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/resources/loading.svg":
+/*!***********************************!*\
+  !*** ./src/resources/loading.svg ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/media/loading.650efd36.svg");
+
+/***/ }),
+
+/***/ 1:
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** multi (webpack)/hot/dev-server.js ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\97254\Documents\react-learning\git-hub-project\node_modules\webpack\hot\dev-server.js */"./node_modules/webpack/hot/dev-server.js");
+__webpack_require__(/*! C:\Users\97254\Documents\react-learning\git-hub-project\node_modules\@pmmmwh\react-refresh-webpack-plugin\client\ReactRefreshEntry.js */"./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js");
+__webpack_require__(/*! C:\Users\97254\Documents\react-learning\git-hub-project\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\97254\Documents\react-learning\git-hub-project\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[1,"runtime-main","vendors~main"]]]);
+//# sourceMappingURL=main.chunk.js.map
