@@ -73,17 +73,17 @@
         left: 20px !important;
         padding: 6px !important;
     }
-    #searchbar-logo{
-        position: relative !important;
-        left: 30px !important;
-        top: 2px !important;
+   #searchbar-logo{
+        position: absolute !important;
+        left: 32px !important;
+        top: 4px !important;
         width: 20px !important;
         height: 20px !important;
     }
     #searchbar-trash{
-        position: relative !important;
-        left: 50px !important;
-        top: 2px !important;
+        position: absolute !important;
+        left: 70px !important;
+        top: 4.5px !important;
         width: 20px !important;
         height: 20px !important;
     }
