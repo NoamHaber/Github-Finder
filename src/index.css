@@ -68,7 +68,7 @@
     }
     #search-input{
         font-size: 20px !important;
-        width: calc(0.9*var(--navigatorTheme)) !important;
+        width: calc(0.9*var(--ScreenDisplayWidth)) !important;
         position: relative !important;
         left: 20px !important;
         padding: 6px !important;
@@ -76,14 +76,14 @@
    #searchbar-logo{
         position: absolute !important;
         left: 32px !important;
-        top: 4px !important;
+        top: 5px !important;
         width: 20px !important;
         height: 20px !important;
     }
     #searchbar-trash{
         position: absolute !important;
         left: 70px !important;
-        top: 4.5px !important;
+        top: 5.5px !important;
         width: 20px !important;
         height: 20px !important;
     }
